@@ -23,5 +23,14 @@ namespace Scrabble.Tests
     int wordScore = testScore.GetScore(testWord);
     Assert.AreEqual(wordScore, 16);
     }
+
+    [TestMethod]
+    public void GetScore_returnsDifferentScrabbleScore_Int()
+    {
+    Score testScore = new Score();
+    string testWord = "candelabra";
+    int wordScore = testScore.GetScore(testWord);
+    Assert.AreEqual(wordScore, 15);
+    }
   }
 }
